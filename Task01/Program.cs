@@ -12,10 +12,10 @@
 Random rnd = new Random();
 
 // 2 Объявляю двумерный массив размером m×n
+// можно так же получать длины строк и столбцов через Console.ReadLine() и Convert.ToInt32
 int nRow = 4;
-int nCol = 4;
 
-int[,] numArray = new int[nRow, nCol];
+int[,] numArray = new int[nRow, nRow];
 
 // 3 Заполняю массив, вывожу на экран.		
 for (int i = 0; i < numArray.GetLength(0); i++)
@@ -29,8 +29,7 @@ for (int i = 0; i < numArray.GetLength(0); i++)
 }
 Console.WriteLine();
 
-// 3 Сумма первой строки массива для поиска минимума.
-
+// 3 Сумма первой строки массива для последующего поиска минимума.
 int min = 0;
 
 for (int i = 0; i < 1; i++)
@@ -40,8 +39,6 @@ for (int i = 0; i < 1; i++)
         min = min + numArray[i, j];
     }
 }
-Console.WriteLine("Сумма первой строки массива для поиска минимума = " + min);
-Console.WriteLine();
 
 // 4 поиск и выведение минимальной строки			
 int sumRow = 0;
